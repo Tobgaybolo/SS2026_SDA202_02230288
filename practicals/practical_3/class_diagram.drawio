@@ -1,0 +1,49 @@
+<mxfile host="65bd71144e">
+    <diagram id="QxZ2Y97GLrpzzKnHGk3A" name="Page-1">
+        <mxGraphModel dx="1438" dy="568" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#FFFFFF,#121212)" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Student&#xa;---------------------&#xa;+ studentId: String&#xa;+ name: String&#xa;---------------------&#xa;+ submitAssignment()&#xa;+ viewResult()" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="80" width="210" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Professor&#xa;---------------------&#xa;+ professorId: String&#xa;+ name: String&#xa;---------------------&#xa;+ setCriteria()&#xa;+ reviewResult()" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="300" width="210" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Submission&#xa;---------------------&#xa;+ submissionId: String&#xa;+ fileName: String&#xa;+ submittedAt: DateTime" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="80" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="GradingSystem&#xa;---------------------&#xa;+ runTests()&#xa;+ checkPlagiarism()&#xa;+ calculateGrade()" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="260" width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Result&#xa;---------------------&#xa;+ grade: String&#xa;+ feedback: String&#xa;+ similarityScore: float" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="560" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="MainframeLMS&#xa;---------------------&#xa;+ publishGrade()" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="340" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="submits" style="endArrow=block;endFill=1;html=1;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="processes" style="endArrow=block;endFill=1;html=1;" edge="1" parent="1" source="4" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="sets rules for" style="endArrow=block;endFill=1;html=1;" edge="1" parent="1" source="3" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="produces" style="endArrow=block;endFill=1;html=1;" edge="1" parent="1" source="5" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="views" style="endArrow=block;endFill=1;html=1;" edge="1" parent="1" source="2" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="reviews" style="endArrow=block;endFill=1;html=1;" edge="1" parent="1" source="3" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="publishes to" style="endArrow=block;endFill=1;html=1;" edge="1" parent="1" source="5" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
